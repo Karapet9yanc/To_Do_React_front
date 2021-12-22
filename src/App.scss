@@ -1,0 +1,106 @@
+body {
+  background-image: url(image/fonImageBody.jpg) no-repeat;
+}
+.logotip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Tasks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.task {
+  margin-bottom: 2%;
+  display: flex;
+  border: 2px solid gold;
+  height: 40px;
+  width: 50%;
+  justify-content: space-between;
+  border-radius: 12px;
+  align-items: center;
+  background-color: black;
+}
+.function {
+  display: flex;
+  position: relative;
+}
+img {
+  height: 32px;
+  width: 32px;
+}
+span {
+  color: gold;
+  font-size: x-large;
+}
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 51px;
+    padding: 15px 15px 15px 15px;
+    color: gold;
+    box-shadow: inset 0 0 0 3px gold, inset 0 0 5px rgba(0, 0, 0, 0.986),
+      inset 385px 0 35px rgb(0, 0, 0);
+    border-radius: 10px 50px 10px 50px;
+  }
+  input {
+    background: transparent;
+    border: none;
+    font-size: x-large;
+    color: gold;
+    outline: none;
+    border-bottom: 2px solid gold;
+  }
+
+  button {
+    border: 2px solid gold;
+    font-size: x-large;
+    color: gold;
+    background-color: black;
+  }
+}
+.delete {
+  height: 40px;
+  width: 45px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: black;
+  border: 2px solid gold;
+}
+.editeTask {
+  height: 40px;
+  width: 45px;
+  border-radius: 9px 0px 0px 9px;
+  background-color: black;
+  border: 2px solid gold;
+}
+.element {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Text {
+  display: flex;
+  align-items: center;
+}
+.EditeInput {
+  background: transparent;
+  border: none;
+  font-size: x-large;
+  color: gold;
+  outline: none;
+  border-bottom: 2px solid gold;
+}
+.EditeDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.divFunction {
+  display: flex;
+}
