@@ -3,6 +3,7 @@ import axios from "axios";
 import editImage from "../../image/edit.png";
 import deleteImage from "../../image/delete.png";
 const EditandDeleteComponent = ({ setTasks, setOpen, task }) => {
+  const { text } = task;
   const openModel = () => {
     setOpen(true);
   };
@@ -16,7 +17,7 @@ const EditandDeleteComponent = ({ setTasks, setOpen, task }) => {
   return (
     <div className="element">
       <div className="Text">
-        <span>{task.text}</span>
+        <span>{text}</span>
       </div>
       <div className="function" id="FuctionImage">
         <button className="editeTask" onClick={() => openModel(task._id)}>

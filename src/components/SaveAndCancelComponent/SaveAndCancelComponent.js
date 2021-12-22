@@ -3,14 +3,14 @@ import axios from "axios";
 import saveImage from "../../image/save.png";
 import closeImage from "../../image/close.png";
 const SaveAndCancelComponent = ({ setTasks, setOpen, task, tasks, index }) => {
+  const [saveText, setSaveText] = useState("");
+  const { text } = task;
   const closeModel = () => {
     setOpen(false);
   };
 
-  const [saveText, setSaveText] = useState("");
-
   const saveTask = async (index) => {
-    let { _id, isCheck } = tasks[index];
+    const { _id, isCheck } = tasks[index];
 
     if (saveText.trim() !== "") {
       await axios
@@ -32,7 +32,7 @@ const SaveAndCancelComponent = ({ setTasks, setOpen, task, tasks, index }) => {
       <input
         type="text"
         className="EditeInput"
-        defaultValue={task.text}
+        defaultValue={text}
         onChange={(e) => setSaveText(e.target.value)}
       />
       <div className="divFunction">

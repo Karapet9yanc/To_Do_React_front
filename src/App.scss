@@ -1,11 +1,13 @@
 body {
   background-image: url(image/fonImageBody.jpg) no-repeat;
 }
+
 .logotip {
   position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .Tasks {
   position: relative;
   display: flex;
@@ -13,6 +15,7 @@ body {
   flex-direction: column;
   margin-top: 5%;
 }
+
 .task {
   margin-bottom: 2%;
   display: flex;
@@ -24,23 +27,28 @@ body {
   align-items: center;
   background-color: black;
 }
+
 .function {
   display: flex;
   position: relative;
 }
+
 img {
   height: 32px;
   width: 32px;
 }
+
 span {
   color: gold;
   font-size: x-large;
 }
+
 header {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   h1 {
     font-size: 51px;
     padding: 15px 15px 15px 15px;
@@ -49,6 +57,7 @@ header {
       inset 385px 0 35px rgb(0, 0, 0);
     border-radius: 10px 50px 10px 50px;
   }
+
   input {
     background: transparent;
     border: none;
@@ -65,6 +74,7 @@ header {
     background-color: black;
   }
 }
+
 .delete {
   height: 40px;
   width: 45px;
@@ -72,6 +82,7 @@ header {
   background-color: black;
   border: 2px solid gold;
 }
+
 .editeTask {
   height: 40px;
   width: 45px;
@@ -79,15 +90,18 @@ header {
   background-color: black;
   border: 2px solid gold;
 }
+
 .element {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .Text {
   display: flex;
   align-items: center;
 }
+
 .EditeInput {
   background: transparent;
   border: none;
@@ -96,11 +110,13 @@ header {
   outline: none;
   border-bottom: 2px solid gold;
 }
+
 .EditeDiv {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
+
 .divFunction {
   display: flex;
 }
