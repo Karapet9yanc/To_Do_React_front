@@ -8,7 +8,7 @@ const MainContainerComponent = ({ tasks, setTasks, setTask }) => {
   return (
     <>
       <HeaderComponent tasks={tasks} setTasks={setTasks} />;
-      <div className="Tasks">
+      <div className="tasks">
         {tasks.map((task, index) => (
           <div key={`task-${index}`} className="task">
             <input

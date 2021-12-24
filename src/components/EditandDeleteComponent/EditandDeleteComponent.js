@@ -29,7 +29,7 @@ const EditandDeleteComponent = ({ setTasks, setOpen, task, setTask }) => {
         <span>{text}</span>
       </div>
 
-      <div className="function" id="FuctionImage">
+      <div className="function" id="fuctionImage">
         <button
           className="editeTask"
           onClick={() => {

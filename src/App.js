@@ -3,7 +3,7 @@ import fonImageBody from "../src/image/fonImageBody.jpg";
 import axios from "axios";
 import "./App.scss";
 import MainContainerComponent from "./components/MainContainerComponent/MainContainerComponent";
-import { Switch, Router, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import SaveAndCancelComponent from "./components/SaveAndCancelComponent/SaveAndCancelComponent";
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <img src={fonImageBody} alt={"logo"} className={"logotip"} />;
+      <img src={fonImageBody} alt={"logo"} className={"logotip"} />
       <Switch>
         <Route path="/home">
           <MainContainerComponent
@@ -26,7 +26,6 @@ const App = () => {
             setTasks={setTasks}
             setTask={setTask}
           />
-          ;
         </Route>
         <Route path="/edit">
           <SaveAndCancelComponent setTasks={setTasks} task={currentTask} />

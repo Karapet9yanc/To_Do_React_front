@@ -34,12 +34,12 @@ const SaveAndCancelComponent = ({ setTasks, task }) => {
   };
 
   return (
-    <div className="EditeDiv">
+    <div className="editeDiv">
       <HeaderComponent />
-      <div className="EditeSaveDiv">
+      <div className="editeSaveDiv">
         <input
           type="text"
-          className="EditeInput"
+          className="editeInput"
           defaultValue={text}
           onChange={(e) => setSaveText(e.target.value)}
         />
