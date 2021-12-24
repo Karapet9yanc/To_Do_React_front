@@ -25,19 +25,19 @@ const EditandDeleteComponent = ({ setTasks, setOpen, task, setTask }) => {
 
   return (
     <div className="element">
-      <div className="Text">
+      <div className="text">
         <span>{text}</span>
       </div>
 
-      <div className="function" id="fuctionImage">
+      <div className="function" id="fuction-image">
         <button
-          className="editeTask"
+          className="edite-task"
           onClick={() => {
             editTask();
             openModel(task);
           }}
         >
-          <img src={editImage} alt="editeTask" />
+          <img src={editImage} alt="edite-task" />
         </button>
 
         <button onClick={() => deleteTaskFunction(_id)} className="delete">

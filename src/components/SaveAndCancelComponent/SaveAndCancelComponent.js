@@ -34,18 +34,18 @@ const SaveAndCancelComponent = ({ setTasks, task }) => {
   };
 
   return (
-    <div className="editeDiv">
+    <div className="edite-div">
       <HeaderComponent />
-      <div className="editeSaveDiv">
+      <div className="edite-save-div">
         <input
           type="text"
-          className="editeInput"
+          className="edite-input"
           defaultValue={text}
           onChange={(e) => setSaveText(e.target.value)}
         />
-        <div className="divFunction">
+        <div className="div-function">
           <button
-            className="editeTask"
+            className="edite-task"
             onClick={() => {
               saveTask(task);
             }}

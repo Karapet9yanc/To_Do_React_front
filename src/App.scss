@@ -83,7 +83,7 @@ header {
   border: 2px solid gold;
 }
 
-.editeTask {
+.edite-task {
   height: 40px;
   width: 45px;
   border-radius: 9px 0px 0px 9px;
@@ -102,7 +102,7 @@ header {
   align-items: center;
 }
 
-.editeInput {
+.edite-input {
   background: transparent;
   border: none;
   font-size: x-large;
@@ -111,18 +111,18 @@ header {
   border-bottom: 2px solid gold;
 }
 
-.editeDiv {
+.edite-div {
   display: flex;
   width: 100%;
   justify-content: space-between;
   position: absolute;
 }
 
-.divFunction {
+.div-function {
   display: flex;
 }
 
-.editeSaveDiv {
+.edite-save-div {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -138,7 +138,7 @@ header {
   margin-top: 5%;
 }
 
-.editeDiv {
+.edite-div {
   display: flex;
   justify-content: center;
   position: absolute;

@@ -28,7 +28,7 @@ const HeaderComponent = ({ tasks, setTasks }) => {
         <input
           type="text"
           placeholder="Enter your task..."
-          className="form__field"
+          className="form-field"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
