@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Snackbar from "@mui/material/Snackbar";
 import "../../App.scss";
 
-const AddTasksComponent = ({ tasks, setTasks }) => {
+const HeaderComponent = ({ tasks, setTasks }) => {
   const [text, setText] = useState("");
+  const [snackbar, setSnackbar] = useState({ open: false, message: "" });
+  const { open, message } = snackbar;
   const addNewTask = async () => {
     if (text.trim()) {
       await axios
@@ -15,9 +18,7 @@ const AddTasksComponent = ({ tasks, setTasks }) => {
           setTasks(res.data.data);
           setText("");
         });
-    } else {
-      alert("Введите задание в поле ввода");
-    }
+    } else setSnackbar({ open: true, message: "Please fill in all fields" });
   };
 
   return (
@@ -32,8 +33,14 @@ const AddTasksComponent = ({ tasks, setTasks }) => {
           onChange={(e) => setText(e.target.value)}
         />
         <button onClick={() => addNewTask()}>Add news</button>
+        <Snackbar
+          onClose={() => setSnackbar({ open: false })}
+          open={open}
+          autoHideDuration={2000}
+          message={message}
+        />
       </div>
     </header>
   );
 };
-export default AddTasksComponent;
+export default HeaderComponent;

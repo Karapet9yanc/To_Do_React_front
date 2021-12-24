@@ -2,28 +2,45 @@ import React from "react";
 import axios from "axios";
 import editImage from "../../image/edit.png";
 import deleteImage from "../../image/delete.png";
-const EditandDeleteComponent = ({ setTasks, setOpen, task }) => {
-  const { text } = task;
+import { useHistory } from "react-router-dom";
+
+const EditandDeleteComponent = ({ setTasks, setOpen, task, setTask }) => {
+  const { _id, isCheck, text } = task;
+  const history = useHistory();
+
   const openModel = () => {
     setOpen(true);
   };
 
-  function deleteTaskFunction(_id) {
+  const deleteTaskFunction = (_id) => {
     axios.delete(`http://localhost:8000/deleteTask?_id=${_id}`).then((res) => {
       setTasks([...res.data.data]);
     });
-  }
+  };
+
+  const editTask = () => {
+    setTask(task);
+    history.push(`/edit/${_id}`);
+  };
 
   return (
     <div className="element">
       <div className="Text">
         <span>{text}</span>
       </div>
+
       <div className="function" id="FuctionImage">
-        <button className="editeTask" onClick={() => openModel(task._id)}>
+        <button
+          className="editeTask"
+          onClick={() => {
+            editTask();
+            openModel(task);
+          }}
+        >
           <img src={editImage} alt="editeTask" />
         </button>
-        <button onClick={() => deleteTaskFunction(task._id)} className="delete">
+
+        <button onClick={() => deleteTaskFunction(_id)} className="delete">
           <img src={deleteImage} alt={"delete"} />
         </button>
       </div>
